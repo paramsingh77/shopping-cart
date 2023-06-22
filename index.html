@@ -9,14 +9,15 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
+		<link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
 	</head>
 	<body>
 		<!-- NAV-BAR -->
-		<nav class="container flex">
-			<div class="logo">
-				<img src="./assets/log1.png" alt="company-logo" />
+		<nav class="container flex nav-container" id="nav">
+			<div class="logo" id="moving-logo">
+				<img class="logf" src="./assets/log1.png" alt="company-logo" />
 			</div>
-			<div class="logo-name">STILL ROLLIN</div>
+			<div class="logo-name" id="logo-name">STILL ROLLIN</div>
 			<div class="nav-links cart">
 				<ul class="flex">
 					<!-- <i class="fa-sharp fa-solid fa-cart-shopping"></i> -->
@@ -26,8 +27,8 @@
 						height="20"
 						fill="currentColor"
 						class="bi bi-bag fa-10x"
-						style="color: black"
 						viewBox="0 0 16 16"
+                        id = "bi-bag"
 					>
 						<path
 							d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z "
@@ -37,18 +38,25 @@
 				</ul>
 			</div>
 		</nav>
+        <div class="video" id="video">
+            <video loop  autoplay muted src="./assets/guci.mp4" type="video/mp4" class="video1"></video>
+        </div>
 		<div class="quote">
-			<h1 class="quo">THIS IS SUMMER TIME<br>IT IS ONLY FOR YOU</h1>
-			
+			<h1 class="quo">THIS IS SUMMER TIME<br />IT IS ONLY FOR YOU</h1>
 		</div>
 		<main>
 			<div class="container flex item-container">
-				<div id="shop">
-					
-				</div>
+				<div id="shop"></div>
 			</div>
 		</main>
-    
+		<!-- <div class="video">
+			<video autoplay loop muted play-inline pause >
+                <source class="video1" src="./assets/guci.mp4" type="video/mp4">
+            </video>
+			</div>
+		</div>
+    -->
+        <
 		<!-- <script
 			src="https://kit.fontawesome.com/1d1e5c7ff6.js"
 			crossorigin="anonymous"

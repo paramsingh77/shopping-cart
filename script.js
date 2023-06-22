@@ -130,14 +130,71 @@ let update = (id) => {
 	if (search) {
 		console.log(search.item);
 		document.getElementById(id).innerHTML = search.item;
-    }
-    
-    //update cart icon will be updated every time by getting the new sum of update items in the value.
+	}
+
+	//update cart icon will be updated every time by getting the new sum of update items in the value.
 	updateCartIcon();
 };
 
 let updateCartIcon = () => {
-    let inTxt = document.getElementById("cart-amount");
-    //used here reduce function to get the sum of items to show the current items in the bag
+	let inTxt = document.getElementById("cart-amount");
+	//used here reduce function to get the sum of items to show the current items in the bag
 	inTxt.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
+
+const getTag = document.getElementById("nav");
+const logi = document.getElementById("bi-bag");
+
+const logoName = document.getElementById("logo-name");
+
+const movingLogo = document.getElementById("moving-logo");
+
+getTag.addEventListener("mouseover", () => {
+	getTag.style.backgroundColor = "white";
+	logoName.style.color = "black";
+	logi.style.color = "black";
+	movingLogo.style.color = "white";
+});
+
+
+getTag.addEventListener("mouseout", () => {
+	getTag.style.backgroundColor = "transparent";
+	logoName.style.color = "white";
+	logi.style.color = "white";
+	movingLogo.style.display = "visible";
+});
+
+
+window.addEventListener("scroll", function () {
+	let element = document.getElementById("logo-name");
+	let rgb = window.getComputedStyle(element).backgroundColor.match(/\d+/g);
+
+	let luminance = Math.round(
+		(parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) /
+			1000
+	);
+
+	if (luminance > 128) {
+		element.style.color = "black";
+	} else {
+		element.style.color = "white";
+	}
+});
+
+
+
+// to be fixed
+window.addEventListener("scroll", function () {
+	let videoSection = document.getElementById("video");
+	let logoName = document.getElementById("logo-name");
+
+	let videoRect = videoSection.getBoundingClientRect();
+
+	if (videoRect.top >= 0 && videoRect.bottom <= window.innerHeight) {
+		// Video section is in the viewport, set the text color to white
+		logoName.style.color = "white";
+	} else {
+		// Video section is not in the viewport, set the text color to black
+		logoName.style.color = "black";
+	}
+});
