@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style1.css">
+
+</head>
+<body>
+   <nav class="container flex nav-container">
+          <div class="logo">
+				<a href="http://www.github.com/paramsingh77">
+                    <img class="logo" id="logf" src="./assets/log1.png" alt="company-logo"/></a>
+			</div>
+            <div class="logo-name">
+              <a href="index.html"> STILL ROLLIN</a> 
+            </div>
+            <div class="cart-bag cart flex">
+                <svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						fill="currentColor"
+						class="bi bi-bag fa-10x"
+						viewBox="0 0 16 16"
+                        id = "bi-bag"
+					>
+						<path
+							d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z "
+						/>
+					</svg>
+					<div id="cart-amount" class="cart-amount">0</div>
+            </div>
+   </nav>
+
+   <div class="cart-handler" id="label">
+   </div>
+
+   <div class="shopping-cart" id="shopping-cart">
+
+   </div>
+
+   <script src="./src/Data.js"></script>
+   <script src="./src/cart.js"></script>
+</body>
+</html>

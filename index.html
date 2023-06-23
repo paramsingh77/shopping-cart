@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./src/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,9 +15,9 @@
 		<!-- NAV-BAR -->
 		<nav class="container flex nav-container" id="nav">
 			<div class="logo" id="moving-logo">
-				<img class="logf" src="./assets/log1.png" alt="company-logo" />
+				<a href="https://www.github.com/paramsingh77"><img class="logf" id="logf" src="./assets/2.png" alt="company-logo" /></a>
 			</div>
-			<div class="logo-name" id="logo-name">STILL ROLLIN</div>
+			<a href="index.html"><div class="logo-name" id="logo-name">STILL ROLLIN</div></a>
 			<div class="nav-links cart">
 				<ul class="flex">
 					<!-- <i class="fa-sharp fa-solid fa-cart-shopping"></i> -->
@@ -39,8 +39,14 @@
 			</div>
 		</nav>
         <div class="video" id="video">
-            <video loop  autoplay muted src="./assets/guci.mp4" type="video/mp4" class="video1"></video>
+             <div class="filler">
+                   <a href="cart.html"> <h2 class="wish">Your Wishlist</h2></a>
+            </div>
+            <video loop  autoplay  muted src="./assets/productImages/y2mate.com - Through the Storm  Vogue Italy  Fashion Film_1080p.mp4" type="video/mp4" class="video1"></video>
+           
+        
         </div>
+        
 		<div class="quote">
 			<h1 class="quo">THIS IS SUMMER TIME<br />IT IS ONLY FOR YOU</h1>
 		</div>
@@ -56,12 +62,13 @@
 			</div>
 		</div>
     -->
-        <
+        
 		<!-- <script
 			src="https://kit.fontawesome.com/1d1e5c7ff6.js"
 			crossorigin="anonymous"
 		></script> -->
 
-		<script src="script.js"></script>
+        <script src="./src/Data.js"></script>
+		<script src="./src/script.js"></script>
 	</body>
 </html>

@@ -1,0 +1,143 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Cormorant:wght@300&family=Noto+Sans+Mono:wght@300&family=Poppins:wght@400;700&family=Quicksand:wght@300;500&family=Raleway:wght@200;400;500;600&family=Roboto:wght@300;400&family=Spectral:ital,wght@1,200&display=swap");
+ */
+@import url('https://fonts.cdnfonts.com/css/turner-new-bold');
+ @import url('https://fonts.cdnfonts.com/css/serfiyan');
+@import url('https://fonts.cdnfonts.com/css/tt-ricordi-greto-trial');
+@import url('https://fonts.cdnfonts.com/css/monocole-free');
+@import url('https://fonts.cdnfonts.com/css/harttley-suttonline');
+@import url('https://fonts.cdnfonts.com/css/foxtel-2017-19');
+@import url('https://fonts.cdnfonts.com/css/aventena');
+@import url('https://fonts.cdnfonts.com/css/goldburg');
+@import url('https://fonts.cdnfonts.com/css/g-gerhana-matahari');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+   width: 100px;
+   height: 100px;
+	transform-origin: 50% 50%;
+	transition: 5.5s;
+	box-shadow: 0.4 0.4 0.4 black;
+	/* -webkit-filter: drop-shadow(2px 2px 2px #666666); */
+	filter: drop-shadow(2px 2px 3px #666666);
+	animation-name: circles;
+	animation-duration: 10s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes circles {
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+body{
+    font-family: 'monocole';
+    font-family: 'g Gerhana Matahari', sans-serif;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    justify-content: space-between;
+    font-family: 'goldburg';
+    /* border-bottom: 0.4px solid black; */
+}
+
+.logo-name{
+    font-weight: bolder;
+    font-size: 2.1rem;
+}
+
+.cart-amount{
+    position: absolute; 
+    top: -10px;
+    right: 15px;
+    font-size: 18px;
+    /* background-color: black; */
+    color: rgb(154, 154, 154);
+    width: 20px;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 200;
+}
+
+.cart{
+    flex-direction: row;
+    font-size: 1.2rem;
+    position: relative;
+    margin-right: 20px;
+}
+
+
+.bi-bag{
+    color: rgb(220, 219, 219);
+    width: 5rem;
+    font-size: 5rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* .cart-handler{
+   
+    width: 100vw;
+    height: 500px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+} */
+
+.xart{
+     background-color: rgb(207, 207, 207);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+    padding: 50px 50px 50px 50px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a::after{
+    color: black;
+}
+
+a:active{
+    color: black;
+}
+
+.HomeButton{
+    display: inline-block;
+    padding: 10px;
+    border: 0.2px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+.HomeButton:hover {
+   background-color: black;
+   color: white;
+   
+}
+
+
+.cart-pick{
+    text-align: center;
+}
+
+.shopping-cart{
+    background-color: antiquewhite;
+    margin-top: 0;
+}
