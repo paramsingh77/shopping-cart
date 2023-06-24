@@ -9,14 +9,14 @@ let generateShop = () => {
             let search = basket.find((x) => x.id === id) || [];
 			return ` <div class="item ">
 				<div class="prod-img">
-					<img class="log-img" id = "log-img"  x.data-options="zoomWidth:70%; zoomHeight:100%" src="${img}" width="200" height="200" />
+					<img class="log-img" id = "log-img"src="${img}" />
 						</div>
 						<div class="details">
 							<h3>${productName}</h3>
 							<p>${desc}</p>
 							<div class="price-quantity flex">
 								$ ${productPrice}
-								<div class="inc-dec">
+								<div class="inc-dec flex">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
                                        onclick = "decrement('${id}')"
@@ -31,7 +31,6 @@ let generateShop = () => {
 											d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
 										/>
 									</svg>
-                                    </div>
                                     <div id = "${id}" id="skp" class="flex">
                                     ${search.item === undefined ? 0 : search.item}
                                     </div>
@@ -49,6 +48,7 @@ let generateShop = () => {
 											d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
 										/>
 									</svg>
+									</div>
 								</div>
 							</div>
 						</div>
