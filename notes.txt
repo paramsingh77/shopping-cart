@@ -1,52 +1,5 @@
-<div class="container">
-					<!-- <div class="item shop">
-						
-
-						 <div class="details">
-							<h3>Casual Tshirt</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<div class="price-quantity flex">
-								$45
-								<div class="inc-dec">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="16"
-										height="16"
-										fill="currentColor"
-										class="bi bi-dash"
-										viewBox="0 0 16 16"
-									>
-										<path
-											d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
-										/>
-									</svg>
-									0
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="16"
-										height="16"
-										fill="currentColor"
-										class="bi bi-plus-lg"
-										viewBox="0 0 16 16"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
-										/>
-									</svg>
-								</div>
-							</div>
-						</div>
-					</div> --> 
-				
-				<div class="item shop">
-                    <div class="prod-img">
-                        <img
-							class="log-img"
-							src="https://static.zara.net/photos///2023/V/0/2/p/3166/416/518/32/w/1126/3166416518_1_1_1.jpg?ts=1686842253998"
-							width="200"
-							height="200"
-						/>
-                    </div>
-                     
-                </div>
+next work:
+1. Linking news project to linkedin.
+2. Updating github with repos and main page.
+4. applying media queries.
+5. changing the video in place of exisitng for media queries.
