@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./src/style1.css">
-
+    <link rel="stylesheet" href="./src/productPage.css">
+    <link href="/shoppingCart/index.html">
 </head>
 <body>
-   <nav class="container flex nav-container">
+    
+    <nav class="container flex nav-container">
           <div class="logo">
 				<a href="http://www.github.com/paramsingh77">
                     <img class="logo" id="logf" src="./assets/2.png" alt="company-logo"/></a>
@@ -34,14 +35,14 @@
             </div>
    </nav>
 
-   <div class="header" id="header">create</div>
-   <div class="cart-handler" id="label"> </div>
+   <div class="container flex">
+             <div class="product-img" id="product-img"></div>
+            <div class="details" id="details"></div>
+            <div class="add-to-bag" id="add-to-bag"></div>
+   </div>
 
-    <div class="shopping-cart" id="shopping-cart"></div>
-    <div class="checkOutBox" id="checkOutBox"></div>
-   <div class="clear"></div>
-   
    <script src="./src/Data.js"></script>
-   <script src="./src/cart.js"></script>
+   <script src="./src/productPage.js"></script>
+   
 </body>
 </html>

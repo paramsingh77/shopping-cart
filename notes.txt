@@ -3,3 +3,23 @@ next work:
 2. Updating github with repos and main page.
 4. applying media queries.
 5. changing the video in place of exisitng for media queries.
+6. fixing the burbeery logo.
+
+
+
+
+function submit(id) {
+	let search = basket.find((x) => x.id === id);
+	let quantity = document.getElementById("quantity").value;
+	if (search === undefined) {
+		basket.push({
+			id: id,
+			item: quantity,
+		});
+	} else {
+		console.log(search);
+		search.item = quantity;
+    }
+    console.log(basket);
+	localStorage.setItem("data", JSON.stringify(basket));
+};

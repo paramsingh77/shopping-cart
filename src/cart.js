@@ -13,12 +13,22 @@ let checkoutBox = document.getElementById("checkOutBox");
 
 let upperCase = document.getElementById("uppercase");
 
+
+
 console.log(basket);
 
 let updateCartIcon = () => {
 	let inTxt = document.getElementById("cart-amount");
 	//used here reduce function to get the sum of items to show the current items in the bag
-	inTxt.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+	let sum = 0;
+
+	for (let i = 0; i < basket.length; i++){
+		sum += parseInt(basket[i].item, 10);
+	}
+	inTxt.innerText = sum;
+
+
+
 	if (inTxt.innerHTML == 0) {
 		shoppingIcon.style.color = "grey";
 		cartAmount.style.color = "grey";
@@ -31,6 +41,27 @@ let updateCartIcon = () => {
 };
 
 updateCartIcon();
+
+
+function submit(id,quantity) {
+	let search = basket.find((x) => x.id === id);
+	// let quantity = document.getElementById("quantity").value;
+	if (search === undefined) {
+		basket.push({
+			id: id,
+			item: quantity,
+		});
+	} else {
+		console.log(search);
+		search.item = quantity;
+	}
+
+	console.log(basket);
+	localStorage.setItem("data", JSON.stringify(basket));
+	updateCartIcon();
+}
+
+
 
 let generateCartItems = () => {
 	if (basket.length !== 0) {
@@ -53,7 +84,7 @@ let generateCartItems = () => {
 					<h5 id="uppercase" >${search.productName.toUpperCase()}</h5>
 						<div class="details flex">
 						<div className = "cart-buttons">
-							  <input type="number" class="show-arrows" min="1" max="10" value="${item}">
+							  <input type="number" oninput="submit('${id}',this.value)" class="show-arrows" min="1" max="10" value="${item}">
 							 </div>
 							<div className = "title-price-x">$ ${search.productPrice}</div>
 							<h3 class="remove">Remove</h3>
@@ -80,3 +111,4 @@ let generateCartItems = () => {
 };
 
 generateCartItems();
+
