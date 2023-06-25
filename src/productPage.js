@@ -4,6 +4,10 @@ let selectedProductId = localStorage.getItem("selectedProductId");
 
 let details = document.getElementById("details");
 
+let shoppingIcon = document.getElementById("bi-bag");
+
+let cartAmount = document.getElementById("cart-amount");
+
 console.log(selectedProductId);
 
 let img = document.getElementById("product-img");
@@ -42,7 +46,7 @@ let generatePage = (selectedProductId) => {
            
             <div class="flex-contian margin">
             <h4><label for="quantity">Quantity:</label></h4>
-            <input type="number" id="quantity" class="quantity" name="quantity" min="1" max="5" value="${search.item}">
+            <input type="number" id="quantity" class="quantity" name="quantity" placeholder="0"  min="1" max="5" value="${search.item}">
             </div>
 
             <h4 class="button" onclick="submit('${search.id}')">Add to Bag</h4>
