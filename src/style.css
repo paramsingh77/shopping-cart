@@ -104,11 +104,11 @@ nav{
 
 .cart-amount{
     position: absolute; 
-    top: -10px;
+    top: 0px;
     right: 15px;
     font-size: 20px;
     /* background-color: black; */
-    color: rgb(154, 154, 154);
+    color: white;
     width: 20px;
     text-align: center;
     border-radius: 3px;
@@ -123,13 +123,31 @@ nav{
 }
 
 .bi-bag{
-    color: rgb(185, 185, 185);
+    color: rgb(255, 255, 255);
     width: 5rem;
     font-size: 5rem;
     z-index: 2;
     cursor: pointer;
+    margin-top: -4px;
 }
 
+
+.bi-heart-fill{
+    transition: 0.2s ease-in-out;
+}
+
+.bi-heart:hover{
+   cursor: pointer;
+   fill: red;
+   stroke: none;
+}
+.bi-suit-heart-fill{
+    color: rgb(240, 65, 65);
+}
+
+.bi-suit-heart-fill:hover{
+    color: rgb(24, 19, 19);
+}
 
 .logo-name{
     font-weight: bold;
@@ -139,7 +157,7 @@ nav{
    font-family: 'GOLDBURG', sans-serif;
     font-size: 3rem;
     mix-blend-mode: difference;
-    
+    margin-left: 300px;
 }
 
 
@@ -243,7 +261,7 @@ main{
 }
 
 .quote{
-    background-image: url('/shoppingCart/assets/productImages/1480145.jpg');
+    background-image: url('/shoppingCart/assets/1480145.jpg');
     height: 400px;
    /* font-family: 'Harttley Suttonline', sans-serif;                                */
     background-attachment: fixed;
@@ -371,4 +389,30 @@ main{
     color: black;
     background-color: white;
     cursor: pointer;
+}
+
+
+.love-amount{
+    position: relative;
+    top: -9px;
+    right: 25px;
+    width: 21px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.loved-bag{
+    /* background-color: white; */
+    width: 20%;
+    right: 140px;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-contain{
+     display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 10px;
 }

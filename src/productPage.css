@@ -12,6 +12,7 @@
 @import url('https://fonts.cdnfonts.com/css/mugen-value');
 @import url('https://fonts.cdnfonts.com/css/trial-oceanic');
 @import url('https://fonts.cdnfonts.com/css/allisa-2');
+
 *{
     margin: 0;
     padding: 0;
@@ -83,7 +84,7 @@ nav{
     right: 15px;
     font-size: 20px;
     /* background-color: black; */
-    color: rgb(154, 154, 154);
+  color: white;
     width: 20px;
     text-align: center;
     border-radius: 3px;
@@ -161,6 +162,16 @@ font-weight: 300;
     margin-left: 10px;
 }
 
+.bi-suit-heart-fill{
+    margin-top: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.bi-suit-heart-fill:hover{
+    /* color: rgb(221, 57, 57); */
+    cursor: pointer;
+}
+
 .flex-contian h3{
   margin-right: 24px;
   font-size: 1.4rem;
@@ -195,3 +206,47 @@ font-weight: 300;
 a{
     text-decoration: none;
 }
+
+.loved-bag{
+    /* background-color: white; */
+    width: 20%;
+    right: 1px;
+    position: absolute;
+    flex-direction: row;
+}
+
+.love-amount{
+    position: relative;
+    top: -9px;
+    right: 25px;
+    font-size: 21px;
+     font-family: 'Monocole Free', sans-serif;
+     font-weight: 100;
+     font-weight: lighter;
+}
+
+
+.loved-items{
+    align-items: center;
+    background-color: rgb(40, 44, 47);
+    
+}
+
+.loved-items-container{
+    gap: 30px;
+    margin-right: 40px;
+}
+
+.bi-heart{
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.bi-heart:hover{
+ cursor: pointer;
+ color: rgb(241, 92, 92);
+}
+.product-container{
+    margin-top: -40px;
+}
+

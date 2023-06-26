@@ -1,8 +1,27 @@
 let shop = document.getElementById("shop");
 
-let basket =  JSON.parse(localStorage.getItem("data")) || [];
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+let lovedItems = JSON.parse(localStorage.getItem("key")) || [];
 
 let cartAmount = document.getElementById('cart-amount');
+
+let selectedProductId = localStorage.getItem("selectedProductId");
+
+let details = document.getElementById("details");
+
+let shoppingIcon = document.getElementById("bi-bag");
+let heartIcon = document.getElementById('heart')
+
+let loveAmount = document.getElementById("love-amount");
+
+let heart = document.getElementById("heart");
+
+console.log(selectedProductId);
+
+let img = document.getElementById("product-img");
+let bag = document.getElementById("add-to-bag");
+
 
 let generateShop = () => {
 	return (shop.innerHTML = shopItemsData
@@ -77,3 +96,19 @@ function handleProductClick(id) {
 	localStorage.setItem("selectedProductId", id);
 	window.location.href = "/shoppingCart/productPage.html";
 }
+
+
+//update love icon
+
+
+let updateLove = () => {
+	let amount = document.getElementById("love-amount");
+	let sum = lovedItems.length;
+
+	amount.innerText = sum;
+	console.log("total number of items", sum);
+};
+
+updateLove();
+
+

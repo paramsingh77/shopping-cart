@@ -36,7 +36,7 @@ let updateCartIcon = () => {
 	} else {
 		console.log("element targeted 1");
 		shoppingIcon.style.color = "white";
-		cartAmount.style.color = "#white";
+		cartAmount.style.color = "white";
 	}
 };
 
@@ -87,7 +87,7 @@ let generateCartItems = () => {
 							  <input type="number" oninput="submit('${id}',this.value)" class="show-arrows" min="1" max="10" value="${item}">
 							 </div>
 							<div className = "title-price-x">$ ${search.productPrice}</div>
-							<h3 class="remove">Remove</h3>
+							<h3  onclick = "updateCartPage('${search.id}')" class="remove">Remove</h3>
 			    		</div>
 			</div>	 
 		</div>
@@ -111,4 +111,22 @@ let generateCartItems = () => {
 };
 
 generateCartItems();
+
+let updateCartPage = (id) => {
+    console.log(id);
+	
+    let index = basket.findIndex((x) => x.id === id);
+	
+    if (index !== -1) {
+        basket.splice(index, 1);
+        console.log('Item removed');
+    } else {
+        console.log('Item not found');
+    }
+
+	console.log('Update complete');
+	generateCartItems();
+	localStorage.setItem("data", JSON.stringify(basket));
+	
+};
 
