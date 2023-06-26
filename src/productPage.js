@@ -192,7 +192,7 @@ function myFunction(id) {
     }
 }
 
-window.addEventListener("load", function (id) {
+window.addEventListener("load", function () {
  // Replace "your-id" with the actual ID you want to pass
 	myFunction(id);
 });
