@@ -29,7 +29,7 @@ let generateShop = () => {
             let { id, productName, productPrice, desc, img } = x;
             let search = basket.find((x) => x.id === id) || [];
 			return ` 
-		<a href="productPage.html">
+		<a href="/shoppingCart/productPage.html">
 			<div class="item " onClick = "handleProductClick('${id}')">
 				<div class="prod-img">
 					<img class="log-img" id = "log-img"src="${img}" />
