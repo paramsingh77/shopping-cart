@@ -94,7 +94,8 @@ updateCartIcon();
 
 function handleProductClick(id) {
 	localStorage.setItem("selectedProductId", id);
-	window.location.href = "./productPage.html";
+	window.location.href = ".productPage.html";
+	console.log('here i have id');
 }
 
 
