@@ -9,6 +9,7 @@
 @import url('https://fonts.cdnfonts.com/css/aventena');
 @import url('https://fonts.cdnfonts.com/css/goldburg');
 @import url("https://fonts.cdnfonts.com/css/futura-pt");
+
 *{
     margin: 0;
     padding: 0;
@@ -155,7 +156,7 @@ nav{
     z-index: 2;
    /* font-family: 'AVENTENA', sans-serif; */
    /* font-family: 'GOLDBURG', sans-serif; */
-     font-family: "Futura PT", sans-serif;
+    font-family: "Futura PT", sans-serif;
     font-size: 3rem;
     mix-blend-mode: difference;
     margin-left: 280px;
