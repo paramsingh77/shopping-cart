@@ -1,31 +1,31 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Cormorant:wght@300&family=Noto+Sans+Mono:wght@300&family=Poppins:wght@400;700&family=Quicksand:wght@300;500&family=Raleway:wght@200;400;500;600&family=Roboto:wght@300;400&family=Spectral:ital,wght@1,200&display=swap");
  */
-@import url('https://fonts.cdnfonts.com/css/turner-new-bold');
- @import url('https://fonts.cdnfonts.com/css/serfiyan');
-@import url('https://fonts.cdnfonts.com/css/tt-ricordi-greto-trial');
-@import url('https://fonts.cdnfonts.com/css/monocole-free');
-@import url('https://fonts.cdnfonts.com/css/harttley-suttonline');
-@import url('https://fonts.cdnfonts.com/css/foxtel-2017-19');
-@import url('https://fonts.cdnfonts.com/css/aventena');
-@import url('https://fonts.cdnfonts.com/css/goldburg');
-@import url('https://fonts.cdnfonts.com/css/g-gerhana-matahari');
-@import url('https://fonts.cdnfonts.com/css/mugen-value');
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.cdnfonts.com/css/turner-new-bold");
+@import url("https://fonts.cdnfonts.com/css/serfiyan");
+@import url("https://fonts.cdnfonts.com/css/tt-ricordi-greto-trial");
+@import url("https://fonts.cdnfonts.com/css/monocole-free");
+@import url("https://fonts.cdnfonts.com/css/harttley-suttonline");
+@import url("https://fonts.cdnfonts.com/css/foxtel-2017-19");
+@import url("https://fonts.cdnfonts.com/css/aventena");
+@import url("https://fonts.cdnfonts.com/css/goldburg");
+@import url("https://fonts.cdnfonts.com/css/g-gerhana-matahari");
+@import url("https://fonts.cdnfonts.com/css/mugen-value");
+@import url("https://fonts.cdnfonts.com/css/futura-pt");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-::selection{
-    background-color: black;
-    color: white;
-    font-weight: light;
+::selection {
+	background-color: black;
+	color: white;
+	font-weight: light;
 }
 
-.logo{
-   width: 100px;
-   height: 100px;
+.logo {
+	width: 100px;
+	height: 100px;
 	transform-origin: 50% 50%;
 	transition: 5.5s;
 	box-shadow: 0.4 0.4 0.4 black;
@@ -39,67 +39,70 @@
 }
 
 @keyframes circles {
-	100%{
+	100% {
 		transform: rotate(360deg);
 	}
 }
 
-body{
-    font-family: 'monocole';
-    font-family: 'g Gerhana Matahari', sans-serif;
+body {
+	font-family: "monocole";
+	font-family: "g Gerhana Matahari", sans-serif;
 }
 
-.flex{
-    display: flex;
-    align-items: center;
+.flex {
+	display: flex;
+	align-items: center;
 }
 
-nav{
-    justify-content: space-between;
-    font-family: 'goldburg';
-    /* border-bottom: 0.4px solid black; */
-    background-color: black;
-    color: white;
+nav {
+	justify-content: space-between;
+	font-family: "goldburg";
+	/* border-bottom: 0.4px solid black; */
+	background-color: black;
+	color: white;
 }
 
-.logo-name{
-    font-weight: bolder;
-    font-size: 2.1rem;
-    color: white;
+.logo-name {
+	font-weight: bolder;
+	font-size: 2.1rem;
+	color: white;
+
 }
 
-.logss{
-    color: white;
+.logss {
+	color: white;
+    font-family: "Futura PT", sans-serif;
+    font-weight: 300;
+    margin-left: 120px;
 }
 
-.cart-amount{
-    position: absolute; 
-    top: -10px;
-    right: 15px;
-    font-size: 18px;
-    /* background-color: black; */
-    color: white;
-    width: 20px;
-     font-family: 'Monocole Free', sans-serif;
-    text-align: center;
-    border-radius: 3px;
-    font-weight: 200;
+.cart-amount {
+	position: absolute;
+	top: -10px;
+	right: 15px;
+	font-size: 18px;
+	/* background-color: black; */
+	color: white;
+	width: 20px;
+	font-family: "Monocole Free", sans-serif;
+	text-align: center;
+	border-radius: 3px;
+	font-weight: 200;
 }
 
-.cart{
-    flex-direction: row;
-    font-size: 1.2rem;
-    position: relative;
-    margin-right: 20px;
+.cart {
+	flex-direction: row;
+	font-size: 1.2rem;
+	position: relative;
+	margin-right: 20px;
 }
 
-
-.bi-bag{
-    color: rgb(220, 219, 219);
-    width: 5rem;
-    font-size: 5rem;
-    z-index: 2;
-    cursor: pointer;
+.bi-bag {
+	color: rgb(220, 219, 219);
+	width: 5rem;
+	font-size: 5rem;
+	z-index: 2;
+	cursor: pointer;
 }
 
 /* .cart-handler{
@@ -111,139 +114,205 @@ nav{
     font-weight: 200;
 } */
 
-.xart{
-     background-color: rgb(207, 207, 207);
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 200;
-    padding: 50px 50px 50px 50px;
+.xart {
+	background-color: rgb(233, 233, 233);
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 200;
+	padding: 50px 50px 50px 50px;
 }
 
-
-
-a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
 }
 
-a::after{
-    color: black;
+a::after {
+	color: black;
 }
 
-a:active{
-    color: black;
+a:active {
+	color: black;
 }
 
-.HomeButton{
-    display: inline-block;
-    padding: 10px;
-    border: 0.2px solid black;
+.HomeButton {
+	display: inline-block;
+	padding: 10px;
+	border: 0.2px solid black;
+	transition: 0.2s ease-in-out;
+	color: rgb(255, 255, 255);
+    font-family: "Futura PT", sans-serif;
+    font-weight: 300;
+    background-color: black;
     transition: 0.2s ease-in-out;
-    color: black;
 }
 
 .HomeButton:hover {
-   background-color: black;
-   color: white;
-   
+	color: gold;
+}
+
+.cart-pick {
+	text-align: center;
+}
+
+.shopping-cart {
+	margin-top: 0;
+}
+
+.card {
+	width: 100%;
+	height: 75px;
+	padding: 20px;
+
+	margin-bottom: 20px;
+	/* background-color: bisque;  */
+}
+
+.card h5 {
+	margin-left: 10px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.header {
+	font-family: "MUGEN Value", sans-serif;
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 40px;
+}
+
+.shopping-cart {
+	width: 50%;
+	float: left;
+	padding: 20px;
+	/* background-color: violet; */
+}
+
+.checkOutBox {
+	height: 75vh;
+	width: 40%;
+	float: right;
+	vertical-align: middle;
+}
+
+.clear {
+	clear: both;
+}
+
+.card-price {
+	width: 300px;
+	height: 300px;
+	/* background-color: rgb(255, 255, 255); */
+	margin: 100px auto;
+	border-radius: 20%;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.details {
+	width: 100%;
+	/* background-color: aquamarine; */
+	gap: 90px;
+	font-size: 0.8 rem;
+	justify-content: flex-end;
+}
+
+.show-arrows {
+	width: 40px;
+}
+
+.remove {
+	font-family: "Monocole Free", sans-serif;
+	font-size: 1rem;
+	padding: 12px 24px;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	transition: 0.2s;
+	transform: translateY(-2px);
+}
+
+.remove:hover {
+	cursor: pointer;
+	color: gold;
+}
+
+.prod-img {
+	width: 75px;
+	height: 75px;
+	object-fit: contain;
+}
+.Text-card {
+	justify-content: center;
+	font-family: "Monocole Free", sans-serif;
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+.checkout {
+	justify-content: center;
+	font-family: "Futura PT", sans-serif;
+	position: absolute;
+	margin-top: 190px;
+	margin-left: 100px;
+	font-weight: 300;
+	padding: 12px 24px;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	transition: 0.2s;
+	transform: translateY(-2px);
+}
+
+.checkout:hover {
+	cursor: pointer;
+	color: gold;
 }
 
 
-.cart-pick{
-    text-align: center;
+.loved-bag{
+    /* background-color: white; */
+    width: 20%;
+    right: 1px;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: -8px;
 }
 
-.shopping-cart{
-  
-    margin-top: 0;
+.love-amount{
+    position: relative;
+    top: -40px;
+    right: -22px;
+    font-size: 18px;
+     font-family: 'Monocole Free', sans-serif;
+     font-weight: 100;
+     font-weight: lighter;
 }
 
-.card{
-    width: 100%;
-    height: 75px;
-    padding: 20px;
-   
-    margin-bottom: 20px;
-    /* background-color: bisque;  */
+
+.loved-items{
+    align-items: center;
+    background-color: rgb(40, 44, 47);
+    
 }
 
-.card h5{
+.loved-items-container{
+    gap: 30px;
+    margin-right: 40px;
+}
+
+.flex-contain{
+     display: flex;
+    align-items: center;
+    gap: 30px;
     margin-left: 10px;
 }
 
 
-.flex{
-    display: flex;
-    align-items: center;
-}
 
-.header{
-    font-family: 'MUGEN Value', sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 40px;
-}
-
-
-
-.shopping-cart{
-    width: 50%;
-    float: left;
-    padding: 20px;
-    /* background-color: violet; */
-}
-
-.checkOutBox{
-  height: 75vh;
-  width: 40%;
-  float: right;
-  vertical-align: middle;
-}
-
-.clear {
-  clear: both;
-}
-
-.card-price{
-    width: 300px;
-    height: 300px;
-    /* background-color: rgb(255, 255, 255); */
-    margin: 100px auto;
-    border-radius: 20%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.details{
-      width: 100%;
-      /* background-color: aquamarine; */
-      gap: 90px;
-      font-size: 0.8 rem;
-      justify-content: flex-end;
-}
-
-.show-arrows{
-    width: 40px;
-}
-
-.remove{
-    font-family: 'Monocole Free', sans-serif;
-     font-size: 1rem;
-     padding: 12px 24px;
-     background-color: black;
-     color: white;
-     border-radius: 10px;
-     transition: 0.2s;
-     transform: translateY(-2px);
-}
-
-
-.remove:hover{
-    cursor: pointer;
-    color: gold;
-}
-
-.prod-img{
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-}

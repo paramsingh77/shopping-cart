@@ -59,9 +59,11 @@ let generatePage = (selectedProductId) => {
             </div>
             <div class="flex-contian ">
             <h4 class="button" onclick="submit('${search.id}')">Add to Bag</h4>
-           <a onclick="lovedProducts('${
+           <a fill="red" id="heart1" onclick="lovedProducts('${
 							search.id
-						}')"> <svg onload = " myFunction('${search.id}')" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" id="heart" class="bi bi-suit-heart-fill" id="heart" viewBox="0 0 16 16">
+						}')"> <svg  onclick = " myFunction('${
+		search.id
+	}')" xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
   <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
 </svg>
 </a>
@@ -83,7 +85,8 @@ function submit(id) {
 	else if (search === undefined) {
 		basket.push({
 			id: id,
-			item: quantity,
+            item: quantity,
+
         });
         console.log('quantity is',quantity);
 	} else {
@@ -99,14 +102,14 @@ function submit(id) {
 let updateHeartIcon = () => {
 	let inTxt = document.getElementById("love-amount");
      let heartIcon = document.querySelector("#heart path");
-	if (inTxt.innerHTML == 0) {
-		heartIcon.style.fill = "grey";
+	if (inTxt.innerHTML === 0) {
+		// heartIcon.style.fill = "grey";
 		loveAmount.style.color = "grey";
 		console.log("element targeted");
 	} else {
 		console.log("element targeted 1");
-		heartIcon.style.fill = "white";
-		loveAmount.style.color = "#ffffff";
+		// heartIcon.style.fill = "white";
+		loveAmount.style.color = "white";
 	}
 };
 updateHeartIcon();
@@ -134,14 +137,25 @@ let updateCartIcon = () => {
 
 updateCartIcon();
 
+
 let lovedProducts = (id) => {
 	let search = lovedItems.find((x) => x.id === id);
-	let heartPath = document.querySelector("#heart path");
-	if (search === undefined) {
-		lovedItems.push({
-            id: id,
-            color:"red",
-		});
+    let heartPath = document.querySelector("#heart path");
+
+    if (search === undefined) {
+
+        let item = shopItemsData.find((x) => x.id === id);
+
+        if (item) {
+            	lovedItems.push({
+								id: id,
+                                productName: item.productName,
+                                productPrice:item.productPrice,
+                                 desc: item.desc,
+                                img:item.img,
+							});
+        }
+	
 
 	} else {
 		let index = lovedItems.findIndex((x) => x.id === id);
@@ -154,6 +168,7 @@ let lovedProducts = (id) => {
     console.log(lovedItems);
     updateLove();
 };
+
 
 
 
@@ -178,21 +193,28 @@ let updateLove = () => {
 updateLove();
 
 
-function myFunction(id) {
-    console.log('the color is ', id);
-    let search = lovedItems.find((x) => x.id === id);
-    let heartPath = document.querySelector("#heart path");
-  
-    if (search === undefined) {
-        console.log("color changed");
-        heartPath.setAttribute("fill", "black");
-    } else {
-        console.log("color changed");
-        heartPath.setAttribute("fill", "red");
-    }
+function myunction(id) {
+	let search = lovedItems.find((x) => x.id === id);
+	let icon = document.querySelector("#heart1 path");
+
+	if (search) {
+        icon.classList.toggle('acti')
+	} else {
+		icon.setAttribute("fill", "black");
+	}
 }
 
-window.addEventListener("load", function () {
- // Replace "your-id" with the actual ID you want to pass
-	myFunction(id);
-});
+
+// window.addEventListener('load', function () {
+//     myFunction(id);
+//   });
+
+  function myFunction(id) {
+    // Use the id parameter here
+    console.log('The id is herre:', id);
+      // Rest of your code
+      window.addEventListener("load", function () {
+          myFunction(id);
+          console.log('functon');
+			});
+  }

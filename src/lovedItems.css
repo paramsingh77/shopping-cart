@@ -20,7 +20,7 @@ body{
     font-family: 'Monocole Free', sans-serif;
     color: black;
     background-color: black;
-                                                
+                                                 
 }
 
 .container{
@@ -150,17 +150,15 @@ nav{
 }
 
 .logo-name{
-   
+    font-weight: 300;
     color: rgb(255, 255, 255);
     z-index: 2;
    /* font-family: 'AVENTENA', sans-serif; */
    /* font-family: 'GOLDBURG', sans-serif; */
-   font-family: "Futura PT", sans-serif;
+     font-family: "Futura PT", sans-serif;
     font-size: 3rem;
     mix-blend-mode: difference;
-    margin-left: 320px;
-    font-weight: 300;
-
+    margin-left: 280px;
 }
 
 
@@ -419,3 +417,74 @@ main{
     gap: 30px;
     margin-left: 10px;
 }
+
+.remove{
+    font-family: 'Monocole Free', sans-serif;
+     padding: 10px 10px;
+     background-color: black;
+     color: white;
+     border-radius: 10px;
+     transition: 0.2s;
+     transform: translateY(-2px);
+}
+
+
+.remove:hover{
+    cursor: pointer;
+    color: gold;
+}
+
+.bg-flower{
+    background-image: url('./flowers-removebg.png');
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-check{
+    background-image: url(./flowers-removebg.png);
+    mix-blend-mode: inherit;
+    height: 350px;
+    width: 1000px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.empty-cart{
+    color: rgb(255, 255, 255);
+    align-items: center;
+    margin-top: 200px;
+    font-size: 1.5rem;
+}
+.text{
+    text-align: center;
+    height: 100px;
+    /* background-color: aliceblue; */
+    margin-bottom: 100px;
+}
+
+.guide-to{
+    color: white;
+     border: 0.2px solid white;
+     padding: 12px 15px;
+     transition: 0.2s ease-in-out;
+}
+
+.button-container{
+    gap: 100px;
+    justify-content: center;
+    margin-top: 50px;
+
+   
+}
+
+
+.guide-to:hover{
+  color: black;
+  background-color: white;
+  cursor: pointer;
+   
+}
+

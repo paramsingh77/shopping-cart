@@ -30,12 +30,12 @@ let updateCartIcon = () => {
 
 
 	if (inTxt.innerHTML == 0) {
-		shoppingIcon.style.color = "grey";
+		//shoppingIcon.style.color = "grey";
 		cartAmount.style.color = "grey";
 		console.log("element targeted");
 	} else {
 		console.log("element targeted 1");
-		shoppingIcon.style.color = "white";
+		//shoppingIcon.style.color = "white";
 		cartAmount.style.color = "white";
 	}
 };
@@ -58,6 +58,7 @@ function submit(id,quantity) {
 
 	console.log(basket);
 	localStorage.setItem("data", JSON.stringify(basket));
+	generateCartItems();
 	updateCartIcon();
 }
 
@@ -68,32 +69,46 @@ let generateCartItems = () => {
 		console.log("Basket is not empty");
 
 		header.innerHTML = `CREATE A WISHLIST`;
-		checkoutBox.innerHTML = `
-		<div class="card-price" id="card-price">
-			
-		</div>
-		`;
-		return (shoppingCart.innerHTML = basket
-			.map((x) => {
+		// checkoutBox.innerHTML = `
+		// <div class="card-price" id="card-price">
+		// 	<h4>Total: </h4>
+		// </div>
+		// `;
+
+		let total = 0;
+		shoppingCart.innerHTML = basket.map((x) => {
 				let { id, item } = x;
 				let search = shopItemsData.find((y) => y.id === id) || [];
+	
+				let ans = item * search.productPrice
+			total += ans;
 				return `
-		<div class="cart-pick flex" >
-			 <div class="card flex">
+					<div class="cart-pick flex" >
+					 <div class="card flex">
 					<img class="prod-img" src = ${search.img1}  alt = " "/>
 					<h5 id="uppercase" >${search.productName.toUpperCase()}</h5>
 						<div class="details flex">
 						<div className = "cart-buttons">
 							  <input type="number" oninput="submit('${id}',this.value)" class="show-arrows" min="1" max="10" value="${item}">
 							 </div>
-							<div className = "title-price-x">$ ${search.productPrice}</div>
+							<div className = "title-price-x">$ ${ans}</div>
 							<h3  onclick = "updateCartPage('${search.id}')" class="remove">Remove</h3>
 			    		</div>
 			</div>	 
 		</div>
 			`;
 			})
-			.join(""));
+			.join("");
+		console.log('the total is', total);
+		
+		checkoutBox.innerHTML = `
+		<div class="card-price" id="card-price">
+			<h3 class="Text-card">Total : $ ${total} </h3>
+			<h3 class="checkout">Checkout</h3>
+		</div>
+
+		`;
+		
 	} else {
 		header.innerHTML = ``;
 		checkoutBox.innerHTML = ``;
@@ -126,7 +141,24 @@ let updateCartPage = (id) => {
 
 	console.log('Update complete');
 	generateCartItems();
+	updateCartIcon();
 	localStorage.setItem("data", JSON.stringify(basket));
 	
 };
 
+let updateHeartIcon = () => {
+	let inTxt = document.getElementById("love-amount");
+	let heartIcon = document.querySelector("#heart path");
+	if (inTxt.innerHTML === 0) {
+		// heartIcon.style.fill = "grey";
+		inTxt.style.color = "grey";
+		console.log("element targeted");
+	} else {
+		console.log("element targeted 1");
+		// heartIcon.style.fill = "black";
+		inTxt.style.color = "grey";
+	}
+
+	console.log('m working');
+};
+ updateHeartIcon();

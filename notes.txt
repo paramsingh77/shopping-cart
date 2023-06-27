@@ -208,3 +208,7 @@ window.addEventListener("load", function (id) {
  // Replace "your-id" with the actual ID you want to pass
 	myFunction(id);
 });
+
+
+
+using inner text update the calculation of cart.
