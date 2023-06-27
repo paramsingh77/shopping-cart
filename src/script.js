@@ -94,7 +94,7 @@ updateCartIcon();
 
 function handleProductClick(id) {
 	localStorage.setItem("selectedProductId", id);
-	window.location.href = "/shoppingCart/productPage.html";
+	window.location.href = "./productPage.html";
 }
 
 
